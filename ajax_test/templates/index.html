@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col s6 offset-s3">
+        <div class="tinyform">
+          <h1 class="center">Tiny Ajax Form</h1>
+            <form id="tiny-form" data-url="/save/">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" name="" class="btn blue right">Sign Up</button>
+            </form>
+        </div>
+    </div>
+  </div>
+{% endblock %}
